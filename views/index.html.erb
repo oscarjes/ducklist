@@ -1,0 +1,48 @@
+<div class="today-list">
+  <div class="list-header">Todo</div>
+  <div class="search">
+    <form action="/" method="get">
+      <input id="search" type="text" name="q" placeholder="Click to search...">
+    </form>
+  </div>
+  <div class="show">
+    Show: <a href="/">All</a>, <a href="/onlydone">Done</a>, <a href="/undone">Undone</a>
+  </div>
+<form action="update-all" method="post">
+    <div class="sorting-icons">
+      <div id="sorting-icon">
+        <a href="/?sort=done" class="done-icon">
+          <img id="done" title="Show done items first" src="/images/done_icon.png" alt="done">
+        </a>
+      </div>
+      <div id="sorting-icon">
+        <a href="/?sort=undone" class="undone-icon">
+          <img id="undone" title="Show undone items first" src="/images/undone_icon.png" alt="undone">
+        </a>
+      </div>
+      <div id="sorting-icon">
+        <a href="/?sort=asc" class="ascending-icon">
+          <img id="ascending" title="Sort alphabetically A-Z" src="/images/ascending_icon.png" alt="ascending">
+        </a>
+      </div>
+      <div id="sorting-icon">
+        <a href="/?sort=desc" class="descending-icon">
+          <img id="descending" title="Sort alphabetically Z-A" src="/images/descending_icon.png" alt="descending">
+        </a>
+      </div>
+    </div>
+  <div id="save">
+    <button id="save" type="submit" value="save" name="save">
+      Save
+    </button>
+  </div>
+    <div class="js-sortable">
+      <% items.each_with_index do |item, index| %>
+        <%= erb :"_item.html", locals: {name: item.name, status: item.status, index: index} %>
+      <% end %>
+      </div>
+  </form>
+  <form action="submit" method="post">
+    <input type="text" name="item_name" placeholder="Click to add task...">
+  </form>
+</div>

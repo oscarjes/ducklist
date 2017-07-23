@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/styles/app.css">
+    <link rel="stylesheet" type="text/css" href="/styles/header.css">
+  </head>
+  <body>
+    <div id="header">
+      <a href="/" class="header-logo">
+        <img src="/images/ducky_128.png" alt="logo">
+        DuckList
+      </a>
+     </div>
+    <%= yield %>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/html.sortable.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

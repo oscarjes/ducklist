@@ -1,0 +1,5 @@
+- [ ] Buy milk
+- [x] Feed dogs
+- [ ] Organize poker night
+- [x] Meditate
+- [ ] Record gif

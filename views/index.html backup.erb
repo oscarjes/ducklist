@@ -1,0 +1,68 @@
+<form action="update-all" method="post">
+<h1 id="h1-hide">Todo</h1>
+<div class="today-list">
+  <div class="list-header">Today</div>
+
+  <div class="show">
+    Show: <a href="/">All</a>, <a href="/onlydone">Done</a>, <a href="/undone">Undone</a>
+  </div>
+
+    <div class="sorting-icons">
+      <div id="sorting-icon">
+        <a href="/?sort=done" class="done-icon">
+          <img id="done" title="Show done items first" src="/images/done_icon.png" alt="done">
+        </a>
+      </div>
+      <div id="sorting-icon">
+        <a href="/?sort=undone" class="undone-icon">
+          <img id="undone" title="Show undone items first" src="/images/undone_icon.png" alt="undone">
+        </a>
+      </div>
+      <div id="sorting-icon">
+        <a href="/?sort=asc" class="ascending-icon">
+          <img id="ascending" title="Sort alphabetically A-Z" src="/images/ascending_icon.png" alt="ascending">
+        </a>
+      </div>
+      <div id="sorting-icon">
+        <a href="/?sort=desc" class="descending-icon">
+          <img id="descending" title="Sort alphabetically Z-A" src="/images/descending_icon.png" alt="descending">
+        </a>
+      </div>
+    </div>
+  <div id="save">
+    <button id="save" type="submit" value="save" name="save">
+      Save
+    </button>
+  </div>
+    <div class="js-sortable">
+      <% items.each_with_index do |item, index| %>
+          <div class="item">
+            <% if item.status == "done" %>
+              <div class="item-text-done">
+                <%= item.name %>
+              </div>
+              <div class="toggle-button">
+                <button class="undo" type="submit" value="<%=item.index%>" name="toggle">
+                  Undo
+                </button>
+              </div>
+            <% else %>
+              <div class="item-text-undone">
+                <%= item.name %>
+              </div>
+              <div class="toggle-button">
+                <button class="done" type="submit" value="<%=item.index%>" name="toggle">
+                  Done
+                </button>
+              </div>
+            <% end %>
+            <input type="hidden" value="<%=item.name%>" name="items[][name]">
+            <input type="hidden" value="<%=item.status%>" name="items[][status]">
+          </div>
+      <% end %>
+      </div>
+  </form>
+  <form action="submit" method="post">
+    <input type="text" name="item_name" placeholder="Click to add task...">
+  </form>
+</div>

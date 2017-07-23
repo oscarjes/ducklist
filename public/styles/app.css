@@ -1,0 +1,169 @@
+body{
+  margin-left: 15px;
+  margin-top: 15px;
+  background: #fd7e47;
+  font-family: helvetica neue;
+}
+
+.today-list{
+  background-color: #e2e4e6;
+  padding: 5px;
+  width: 300px;
+  border-radius: 3px;
+  display: block;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.list-header{
+  padding-left: 9px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  color: #4d4d4d;
+}
+.item{
+  height: 15px;
+  line-height: 15px;
+  margin: 5px;
+  padding: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  background-color: white;
+  color: #4d4d4d;
+  border-radius: 3px;
+}
+
+.item-text-done{
+  font-size: 14px;
+  text-decoration: line-through;
+  color: #bbbbbb;
+}
+
+.item-text-undone{
+  font-size: 14px;
+}
+
+button{
+  font-size: 13px;
+  color: white;
+  border: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 3px;
+  text-align: center;
+  width: 45px;
+  font-size: 13px;
+}
+
+button.done{
+  margin-top: -26px;
+  float: right;
+  margin-right: 5px;
+  width: 50px;
+  background-color: #7fbcdf;
+}
+
+button.undo{
+  margin-top: -26px;
+  float: right;
+  margin-right: 5px;
+  width: 50px;
+  background-color: #bbbbbb;
+}
+
+button#save{
+  float: left; 
+  margin-left: 60px;
+  margin-top: -54px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: #bbbbbb;
+}
+input {
+  width: 95%;
+  margin-left: 9px;
+  margin-right: 7px;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: #e2e4e6;
+  color: #4d4d4d;
+  border: none;
+  font-size: 14px;
+}
+
+input[type=text]:focus {
+  outline: none;
+  font-size: 14px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.show{
+  font-size: small;
+  margin-top: 5px;
+  margin-bottom: 9px;
+  margin-left: 9px;
+}
+
+.show a{
+  font-size: small;
+  color: #4d4d4d;
+  text-decoration: none;
+}
+
+img#done{
+  width:20px; 
+  float: right; 
+  margin-top: -25px; 
+  margin-right: 65px;
+}
+
+img#undone{
+  width:20px; 
+  float: right; 
+  margin-top: -25px; 
+  margin-right: 45px;
+}
+
+img#descending{
+  width:20px; 
+  float: right; 
+  margin-top: -25px; 
+  margin-right: 5px;
+}
+
+img#ascending{
+  width:20px; 
+  float: right; 
+  margin-top: -25px; 
+  margin-right: 25px;
+}
+
+.search{
+  float: right;
+  margin-top:-27px;
+  margin-right: 5px;
+}
+
+input#search{
+  font-size: 12px;
+}
+
+input#search[type=text]:focus {
+  font-size: 12px;
+}
+
+.trash{
+  width: 20px;
+  margin-left: 95px;
+  margin-top: -9px;
+  box-sizing: border-box;
+  background: white;
+}

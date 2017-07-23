@@ -1,0 +1,29 @@
+<div class="item">
+  <% if status == "done" %>
+    <div class="item-text-done">
+      <%= name %>
+      <div class="trash">
+        <input class="trash" type="image" src="images/trash.png" name="trash" value="<%= index %>">
+      </div>
+    </div>
+    <div class="toggle-button">
+      <button class="undo" type="submit" value="<%= index %>" name="toggle">
+        Undo
+      </button>
+    </div>
+  <% else %>
+    <div class="item-text-undone">
+      <%= name %>
+      <div class="trash">
+      <input class="trash" type="image" src="images/trash.png" name="trash" value="<%= index %>">
+    </div>
+    </div>
+    <div class="toggle-button">
+      <button class="done" type="submit" value="<%= index %>" name="toggle">
+        Done
+      </button>
+    </div>
+  <% end %>
+  <input type="hidden" value="<%= name %>" name="items[][name]">
+  <input type="hidden" value="<%= status %>" name="items[][status]">
+</div>
