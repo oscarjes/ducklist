@@ -1,5 +1,8 @@
 - [ ] Buy milk
 - [x] Feed dogs
-- [ ] Organize poker night
 - [x] Meditate
-- [ ] Record gif
+- [ ] Eat dinner
+- [x] Record gif
+- [ ] Final design changes
+- [ ] Go to the cinema
+- [x] Organize poker night
