@@ -4,10 +4,13 @@ Todo app inspired by Trello.
 
 ![](ducklist.gif)
 
-## Features
+## User Stories
 
-- [x] Add new tasks
-- [x] Mark tasks as done / undone
+- [x] User can see the list of Todo items on the home page
+- [x] The Todo list and items should be inspired by a list on the Trello board
+- [x] User can click a Done button next to an undone item to complete it
+- [x] User can click an Undo button next to a done item to undo it
+- [x] User can add a new Todo item and Submit
 - [x] Sort tasks alphabetically (A-Z & Z-A)
 - [x] Sort by showing done / undone tasks first
 - [x] Delete items
